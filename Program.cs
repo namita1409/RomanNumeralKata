@@ -2,8 +2,8 @@
 
 RomanNumeral romanNumeral= new RomanNumeral();
 
-Console.WriteLine(" Int to Roman converter");
-Console.WriteLine("pls enter your choice\n");
+Console.WriteLine(" Welcome to Roman Numeral converter app\n");
+Console.WriteLine("please enter your choice\n");
 Console.WriteLine("1. Roman to Int converter \n");
 Console.WriteLine("2. Int to Roman converter \n");
 int choice = Convert.ToInt32(Console.ReadLine());
