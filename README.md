@@ -11,7 +11,7 @@ Roman numerals are represented by seven different symbols: I, V, X, L, C, D and 
 
 # How to use
 
-1. Clone the repository on your local machine with IDE.
+1. Clone the repository to your local machine with IDE.
 2. Then run the application:
 ```
 dotnet run
