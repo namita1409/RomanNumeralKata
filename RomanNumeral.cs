@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -79,6 +79,7 @@ namespace RomanNumeralKata
         }
         public int RomanToInt(string s)
         {
+           
             int sum = 0;
             Dictionary<char, int> romanNumbersDictionary = new()
             {
