@@ -1,4 +1,5 @@
-﻿using RomanNumeralKata;
+using RomanNumeralKata;
+using System.Text.RegularExpressions;
 
 RomanNumeral romanNumeral= new RomanNumeral();
 
@@ -31,12 +32,13 @@ while (!endApp)
             user_input = Console.ReadLine();
         }
 
+
         try
         {
             result = romanNumeral.RomanToInt(user_input.ToUpper());
             if (result == 0)
             {
-                Console.WriteLine("This Roman Numeral not present in my Roman dictionary");
+                Console.WriteLine("This roman numeral not present in my directory ");
             }
             else Console.WriteLine("Your Number: {0:0.##}\n", result);
         }
@@ -61,13 +63,22 @@ while (!endApp)
         // Declare variables and set to empty.
         int input = 0;
         string result = "";
+        String strInput = "";
 
-        // Ask the user to enter roman numerals.
-        Console.Write("Type a Integer number, and then press Enter: ");
-        input = Convert.ToInt32(Console.ReadLine());
+        Regex regex = new Regex(@"^\d+$");
 
+        do
+        {
+            // Ask the user to enter roman numerals.
+            Console.Write("Type a Integer number, and then press Enter: ");
+            strInput = Console.ReadLine();
+        }while (!regex.IsMatch(strInput)) ;
+
+        input = Convert.ToInt32(strInput);
+            
         try
         {
+            
             result = romanNumeral.IntToRoman(input);
 
             Console.WriteLine("Your Roman Number: {0:0.##}\n", result);
